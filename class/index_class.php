@@ -3,6 +3,7 @@
  require_once(__ROOT__.'/admin/lib/database.php');
  require_once(__ROOT__.'/admin/lib/session.php');
  require_once(__ROOT__.'/admin/helper/format.php');
+
 ?>
 
 <?php
@@ -18,7 +19,33 @@
         $this ->fm = new Format();
     }
 
+    public function getSearch($s){
+        $query = "SELECT tbl_sanpham.*, tbl_danhmuc.danhmuc_ten,tbl_loaisanpham.loaisanpham_ten
+        FROM tbl_sanpham INNER JOIN tbl_danhmuc ON tbl_sanpham.danhmuc_id = tbl_danhmuc.danhmuc_id
+        INNER JOIN tbl_loaisanpham ON tbl_sanpham.loaisanpham_id = tbl_loaisanpham.loaisanpham_id
+        WHERE tbl_sanpham.sanpham_tieude LIKE '%$s%'
+        ORDER BY tbl_sanpham.sanpham_id DESC  ";
+        $result = $this -> db ->select($query);
+        return $result;
+    }
 
+    public function insertUser($taikhoan, $matkhau, $customer_name){
+        $query = "INSERT INTO tbl_customer (taikhoan, matkhau, customer_name) VALUES('$taikhoan', '$matkhau', '$customer_name')";
+        $result = $this ->db->insert($query);
+        return $result;
+    }
+
+    public function checkUserName($taikhoan){
+        $query = "SELECT * FROM tbl_customer WHERE taikhoan = '$taikhoan'";
+        $result = $this ->db->select($query);
+        return $result;
+    }
+
+    public function checkLogin($taikhoan, $matkhau){
+        $query = "SELECT * FROM tbl_customer WHERE taikhoan = '$taikhoan' AND matkhau = '$matkhau'";
+        $result = $this ->db->select($query);
+        return $result;
+    }
 
     public function get_anh($sanpham_id) {
         $query = "SELECT * FROM tbl_sanpham_anh WHERE sanpham_id = '$sanpham_id' ORDER BY sanpham_anh_id DESC";

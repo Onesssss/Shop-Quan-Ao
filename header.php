@@ -68,12 +68,32 @@
                 <div class="top-menu-icons">
                     <ul>
                         <li>
-                            <input type="text" placeholder="tìm kiếm">
-                            <i class="fas fa-search"></i>
+                            <form action="search.php">
+                                <div style="display: flex;">
+                                    <input type="text" placeholder="tìm kiếm" name="s" required>
+                                    <button type="submit" style="margin-left: 15px; border: none; margin-bottom: 10px;"><i class="fas fa-search"></i></button> 
+                                </div>
+                                
+                            </form>
                         </li>
-                        <li>
-                            <i class="fas fa-user-secret"></i>
-                        </li>
+                        
+                        <?php if(isset($_SESSION['logged']) && !empty($_SESSION['logged'])){ ?>
+                            <?php 
+                                $logged = $_SESSION['logged'];
+                                $username = $_SESSION['username'];
+                            ?>
+                            <li style="width: max-content;">
+                                <a href=""><?php echo $username; ?></a>
+                            </li>
+                            <li style="width: max-content;">
+                                <a href="logout.php">Đăng Xuất</i></a>
+                            </li>
+                        <?php }else{ ?>
+                            <li>
+                                <a href="login.php"><i class="fas fa-user-secret"></i></a>
+                            </li>
+                        <?php } ?>
+                        
                         <li>
                             <a href="cart.php"><i class="fas fa-shopping-cart"></i><span><?php  if(Session::get('SL'))  {echo Session::get('SL'); } ?></span></a>
                             <div class="cart-content-mini">

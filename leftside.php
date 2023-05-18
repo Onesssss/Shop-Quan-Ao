@@ -1,18 +1,23 @@
 <?php
-if (isset($_GET['loaisanpham_id'])|| $_GET['loaisanpham_id']!=NULL){
+if (isset($_GET['loaisanpham_id']) && $_GET['loaisanpham_id']!=NULL){
     $loaisanpham_id = $_GET['loaisanpham_id'];
-    }
-  
+}
+
+if (isset($_GET['s']) && $_GET['s']!=NULL){
+    $loaisanpham_id = $_GET['s'];
+}
+
+
 ?>
     <!-- -----------------------CARTEGPRY---------------------------------------------- -->
     <section class="cartegory">
         <div class="container">
             <div class="cartegory-top row">
                 <?php  
-                 $get_loaisanphamA = $index -> get_loaisanphamA($loaisanpham_id);
+                $get_loaisanphamA = $index -> get_loaisanphamA($loaisanpham_id);
                 if($get_loaisanphamA){$result = $get_loaisanphamA ->fetch_assoc();} 
                 ?>
-                <p><a style="color:#000000;" href="">Trang chủ</a></p> <span>&#8594;</span> <p><?php if(isset($result['danhmuc_ten'])){echo $result['danhmuc_ten'];} else {echo "Vui lòng thêm danh mục";}?>
+                <p><a style="color:#000000;" href="index.php">Trang chủ</a></p> <span>&#8594;</span> <p><?php if(isset($result['danhmuc_ten'])){echo $result['danhmuc_ten'];} else {echo "Vui lòng thêm danh mục";}?>
             </p><span>&#8594;</span><p><?php if(isset($result['loaisanpham_ten'])){echo $result['loaisanpham_ten'];}else {echo "Vui lòng thêm loại sản phẩm";}?></p>
             </div>
         </div>

@@ -1,11 +1,11 @@
 <?php
-
+define('__ROOT__', dirname(dirname(__FILE__))); 
 require_once(__ROOT__.'/admin/lib/session.php');
 require_once(__ROOT__.'/admin/lib/database.php');
 require_once(__ROOT__.'/helper/format.php');
 require_once(__ROOT__.'../admin/class/cartegory_class.php');
 require_once(__ROOT__.'../admin/class/brand_class.php');
-include(__ROOT__.'../admin/class/product_class.php');
+require_once(__ROOT__.'../admin/class/product_class.php');
 Session::init();
 Session::checkSession()
 ?>

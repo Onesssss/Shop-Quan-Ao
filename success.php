@@ -1,6 +1,6 @@
 <?php
 include "header.php";
-// $session_id = session_id();
+$session_id = session_id();
 ?>
     <!-- -----------------------DELIVERY---------------------------------------------- -->
     <section class="success">
