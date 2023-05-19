@@ -17,9 +17,7 @@ class cartegoty
             $query = "INSERT INTO tbl_danhmuc (danhmuc_ten) VALUES ('$danhmuc_ten')";
             $result = $this ->db ->insert($query);
             header('Location:cartegorylist.php');
-            return $result;
-               
-             
+            return $result;       
        }
    public function show_cartegory(){
        $query = "SELECT * FROM tbl_danhmuc ORDER BY danhmuc_id DESC";

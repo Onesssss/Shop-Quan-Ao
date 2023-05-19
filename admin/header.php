@@ -6,6 +6,7 @@ require_once(__ROOT__.'/helper/format.php');
 require_once(__ROOT__.'../admin/class/cartegory_class.php');
 require_once(__ROOT__.'../admin/class/brand_class.php');
 require_once(__ROOT__.'../admin/class/product_class.php');
+require_once(__ROOT__.'../admin/class/customer_class.php');
 Session::init();
 Session::checkSession()
 ?>
