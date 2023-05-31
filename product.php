@@ -94,9 +94,7 @@ if (isset($_GET['sanpham_id'])|| $_GET['sanpham_id']!=NULL){
                             <i class="far fa-envelope"></i> <p>Mail</p>
                         </div>
                     </div>
-                    <div class="product-content-right-product-QR">
-                        <img src="image/qrcode2.png" alt="">
-                    </div>
+                   
                     <div class="product-content-right-bottom">
                        <div class="product-content-right-bottom-top">
                         &#8744;
@@ -146,7 +144,7 @@ if (isset($_GET['sanpham_id'])|| $_GET['sanpham_id']!=NULL){
                     <a href="product.php?sanpham_id=<?php echo $resultZ['sanpham_id']?>"><img src="admin/uploads/<?php echo $resultZ['sanpham_anh']?>" alt=""></a>
                     <a href="product.php?sanpham_id=<?php echo $resultZ['sanpham_id']?>"> <h1><?php echo $resultZ['sanpham_tieude']?></h1></a>
                     <p><?php $resultA = number_format($resultZ['sanpham_gia']); echo $resultA?><sup>đ</sup></p>
-                    <span>_new_</span>
+              
                 </div>
                 <?php
                     }}
@@ -185,7 +183,6 @@ $(document).ready(function(){
                     data: {session_id:se,sanpham_id:sp,sanpham_tieude:x,sanpham_anh:y,sanpham_gia:z,color_anh:c,quantitys:q,sanpham_size:s},
                     success:function(data){}
                 })
-                // window.location.replace("cart.php");
                 $(location).attr('href','cart.php')
              
         
@@ -209,29 +206,7 @@ $(document).ready(function(){
 
 
         
-        //     $(this).click(function(){
-        //     var x = $(this).parent().find('#question-answer-content').val()
-        //     var y = $(this).parent().find('#baiviet_id').val()
-        //     var z = $(this).parent().find('#user_ten').val()
-        //     var s = $(this).parent().find('#question-idA').val()
-        //     var m = $(this).parent().parent().parent().find('.comment-content-answer')
-        //     // $(this).parent().parent().parent().find('.comment-content-answer').css('border','1px solid red')
-           
-        //     // alert(s)
-        //     if (x!="" )
-        //    {
-            
-        //     $.get ("ajax/question_ajax.php", {content:x,baiviet_id:y,user_ten:z,question_id:s}, function(data) {
-        //        m.html(data);
-        //     })
-        //     location.reload();
-        //    }
-        //    else {
-        //        alert ("Bạn chưa nhập nội dung")
-        //    }
-           
-
-        //   });
+   
        
 
 

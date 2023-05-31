@@ -52,7 +52,7 @@ if (isset($_GET['status'])){
                         <td> <?php echo $result['giaohang']  ?></td>
                         <td> <?php echo $result['thanhtoan']  ?></td>
                         <td> <a href="orderdetail.php?order_ma=<?php echo $result['session_idA'] ?>">Xem</a></td>            
-                        <td><a style="color:tomato" href="?status=0&session_idA=<?php echo $result['session_idA'] ?>">chưa hoàn thành</a></td>
+                        <td><a style="color:tomato" href="?status=0&session_idA=<?php echo $result['session_idA'] ?>">Đã hoàn thành</a></td>
                         <td><a href="orderdelete.php?session_idA=<?php echo $result['session_idA'] ?>" onclick="return confirm('Đơn hàng sẽ bị xóa vĩnh viễn, bạn có chắc muốn tiếp tục không?');">Xóa</a></td>
                     </tr>
                     <?php

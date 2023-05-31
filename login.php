@@ -7,6 +7,9 @@ if(isset($_SESSION['logged']) && !empty($_SESSION['logged'])){
 }
 ?>
 
+
+
+
 <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $taikhoan = $_POST['uname'];

@@ -8,9 +8,8 @@ $session_id = session_id();
            <div class="detail-top">
                 <p>CHI TIẾT ĐƠN HÀNG</p>
             </div>
-            <h1>Mã đơn hàng:<span style="font-size: 20px; color: #378000;">IVY<?php $ma = substr($session_id,0,8); echo $ma   ?></span></h1>
             <div class="detail-text">
-            <div class="detail-text-left-content">
+            <!-- <div class="detail-text-left-content">
                 <p><span style="font-weight: bold; color:red">Thông tin giao hàng</span></p>
                 <br>
                 <?php
@@ -32,7 +31,7 @@ $session_id = session_id();
                 <?php
                  }}
                 ?>
-            </div>
+            </div> -->
             <div class="detail-text-right-content">
             <p><span style="font-weight: bold;color:red">Thông tin đơn hàng hàng</span></p>
             <br>
@@ -50,7 +49,7 @@ $session_id = session_id();
                           
                           $SL = 0;
                           $TT = 0;
-                          $show_carta = $index -> show_carta($session_id);
+                          $show_carta = $index -> show_cart($session_id);
                           if($show_carta){while($result = $show_carta->fetch_assoc()){
                           
                           ?>               

@@ -72,7 +72,6 @@ class brand
     $query = "DELETE  FROM tbl_color WHERE color_id = '$color_id'";
     $result = $this -> db ->delete($query);
     return $result;
-  
 }
 
 

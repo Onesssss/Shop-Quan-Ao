@@ -115,8 +115,18 @@ if(!isset($_GET['id'])){
                         <a href="delivery.php"><button>THANH TOÁN</button></a>
                     </div>
                     <div class="cart-content-right-dangnhap">
-                        <p>TÀI KHOẢN </p> <br>
-                        <p>Hãy <a href="">đăng nhập</a> tài khoản của bạn để tích điểm thành viên.</p>
+                        
+                        <?php
+                        if(isset($_SESSION['logged']) && !empty($_SESSION['logged'])){
+                            //  header("Location: delivery.php");  
+                             die();
+                        }else{
+                           echo" <p>TÀI KHOẢN </p> <br>";
+                            echo "Bạn cần đăng nhập trước khi mua hàng 
+                            <a style = color:red; href='login.php'>Đăng nhập</a> ";
+                        }
+                        ?>
+                        
                     </div>
                 </div>
             </div>

@@ -262,7 +262,7 @@ include_once "../helper/format.php"
 }
         
 public function show_order_detail($order_ma){
-    $query = "SELECT * FROM tbl_carta WHERE session_idA = '$order_ma' ORDER BY carta_id DESC";
+    $query = "SELECT * FROM tbl_cart WHERE session_idA = '$order_ma' ORDER BY cart_id DESC";
     $result = $this -> db ->select($query);
     return $result;
 }
@@ -301,7 +301,7 @@ public function delete_order($session_idA){
     return $result;
 }
 public function delete_cart($session_idA){
-    $query = "DELETE  FROM tbl_carta WHERE session_idA = '$session_idA'";
+    $query = "DELETE  FROM tbl_cart WHERE session_idA = '$session_idA'";
     $result = $this -> db ->delete($query);
     return $result;
 }

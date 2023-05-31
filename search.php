@@ -18,9 +18,7 @@ include "leftside.php"
                         ?>
                             <p><?php if(isset($result['loaisanpham_ten'])) {echo $result['loaisanpham_ten'];}else {echo "Hiện tại chưa có loại sản phẩm nào";}?></p>
                         </div>
-                        <div class="cartegory-right-top-item">
-                            <button><span>Bộ lọc</span><i class="fas fa-sort-down"></i></button>
-                        </div>
+                        
                         <div class="cartegory-right-top-item">
                             <select name="" id="">
                                 <option value="">Sắp xếp</option>
@@ -47,9 +45,7 @@ include "leftside.php"
                         <div class="cartegory-right-bottom-items">
                            
                         </div>
-                        <div class="cartegory-right-bottom-items">
-                            <p><span>&#171;</span> 1 2 3 4 5 <span>&#187;</span> Trang cuối</p>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

@@ -19,11 +19,9 @@ if (isset($_GET['loaisanpham_id'])|| $_GET['loaisanpham_id']!=NULL){
                         ?>
                             <p><?php if(isset($result['loaisanpham_ten'])) {echo $result['loaisanpham_ten'];}else {echo "Hiện tại chưa có loại sản phẩm nào";}?></p>
                         </div>
+                        
                         <div class="cartegory-right-top-item">
-                            <button><span>Bộ lọc</span><i class="fas fa-sort-down"></i></button>
-                        </div>
-                        <div class="cartegory-right-top-item">
-                            <select name="" id="">
+                            <select  id="" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
                                 <option value="">Sắp xếp</option>
                                 <option value="">Giá cao đến thấp</option>
                                 <option value="">Giá thấp đến cao</option>
@@ -48,9 +46,7 @@ if (isset($_GET['loaisanpham_id'])|| $_GET['loaisanpham_id']!=NULL){
                         <div class="cartegory-right-bottom-items">
                            
                         </div>
-                        <div class="cartegory-right-bottom-items">
-                            <p><span>&#171;</span> 1 2 3 4 5 <span>&#187;</span> Trang cuối</p>
-                        </div>
+                       
                     </div>
                 </div>
             </div>

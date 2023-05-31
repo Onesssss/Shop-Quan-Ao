@@ -11,57 +11,57 @@ if(isset($_GET['admin_id'])){
         </div>
             <ul>
             <li><a  href="#"> <img style="width:20px" src="icon/hi.png" alt="">Hello:  <span style="color:blueviolet; font-size:22px"><?php echo Session::get('admin_name') ?></span></a>
-                <li><a href="#"><img style="width:30px" src="icon/note.svg" alt="">Đơn hàng</a>
+                <li><a href="#"><img style="width:30px"  alt="">Đơn hàng</a>
                     <ul>
                         <li><a href="orderlist.php">Chưa hoàn thành</a></li>
                         <li><a href="orderlistdone.php">Đã hoàn thành</a></li>
                         <li><a href="orderlistall.php">Tất cả Đơn hàng</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><img style="width:20px" src="icon/options.png" alt="">Danh Mục</a>
+                <li><a href="#"><img style="width:20px"  alt="">Danh Mục</a>
                     <ul>
                         <li><a href="cartegorylist.php">Danh sách</a></li>
                         <li><a href="cartegoryadd.php">Thêm</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><img style="width:20px" src="icon/menu.png" alt="">Loại Sản Phẩm</a>
+                <li><a href="#"><img style="width:20px"  alt="">Loại Sản Phẩm</a>
                     <ul>
                         <li><a href="brandlist.php">Danh sách</a></li>
                         <li><a href="brandadd.php">Thêm</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><img style="width:20px" src="icon/colour.png" alt="">Màu sắc</a>
+                <li><a href="#"><img style="width:20px"  alt="">Màu sắc</a>
                     <ul>
                         <li><a href="colorlist.php">Danh sách</a></li>
                         <li><a href="coloradd.php">Thêm</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><img style="width:20px" src="icon/article.png" alt="">Sản phẩm</a>
+                <li><a href="#"><img style="width:20px"  alt="">Sản phẩm</a>
                     <ul>
                         <li><a href="productlist.php">Danh sách</a></li>
                         <li><a href="productadd.php">Thêm</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><img style="width:20px" src="icon/picture.png" alt="">Ảnh Sản phẩm</a>
+                <li><a href="#"><img style="width:20px"  alt="">Ảnh Sản phẩm</a>
                     <ul>
                         <li><a href="anhsanphamlists.php">Danh sách</a></li>
                         <li><a href="anhsanphamadds.php">Thêm</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><img style="width:20px" src="icon/size.png" alt="">Size Sản phẩm</a>
+                <li><a href="#"><img style="width:20px"  alt="">Size Sản phẩm</a>
                     <ul>
                         <li><a href="sizesanphamlists.php">Danh sách</a></li>
                         <li><a href="sizesanphamadds.php">Thêm</a></li>
                     </ul>
                 </li>
 
-                <li><a href="#"><img style="width:20px" src="icon/options.png" alt="">Tài Khoản Khách Hàng</a>
+                <li><a href="#"><img style="width:20px"  alt="">Tài Khoản Khách Hàng</a>
                     <ul>
                         <li><a href="customerlist.php">Danh sách</a></li>
                     </ul>
                 </li>
 
-                <li><a href="?admin_id=<?php echo Session::get('admin_id') ?>"> <img style="width:20px" src="icon/logout.png" alt="">Đăng Xuất</a>
+                <li><a href="?admin_id=<?php echo Session::get('admin_id') ?>"> <img style="width:20px"  alt="">Đăng Xuất</a>
                     
                 </li>
             </ul>

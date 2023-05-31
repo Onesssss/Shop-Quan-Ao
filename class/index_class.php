@@ -19,6 +19,7 @@
         $this ->fm = new Format();
     }
 
+
     public function getSearch($s){
         $query = "SELECT tbl_sanpham.*, tbl_danhmuc.danhmuc_ten,tbl_loaisanpham.loaisanpham_ten
         FROM tbl_sanpham INNER JOIN tbl_danhmuc ON tbl_sanpham.danhmuc_id = tbl_danhmuc.danhmuc_id
@@ -111,11 +112,6 @@
         return $result;
     }
 
-    public function get_product($product_id){
-        $query = "SELECT * FROM tbl_baiviet WHERE baiviet_id = '$product_id'";
-        $result = $this -> db ->select($query);
-        return $result;
-    }
 
     public function insert_cart($sanpham_anh,$session_idA,$sanpham_id,$sanpham_tieude,$sanpham_gia,$color_anh,$quantitys,$sanpham_size)
     {
@@ -157,7 +153,7 @@
 
         }
         return $result;
-}
+    }
     public function show_diachi(){
         $query = "SELECT DISTINCT tinh_tp,ma_tinh FROM tbl_diachi ORDER BY ma_tinh";
         $result = $this -> db ->selectdc($query);
@@ -204,7 +200,7 @@
             $color_anh = $resultB['color_anh'];
             $quantitys = $resultB['quantitys'];
             $sanpham_size = $resultB['sanpham_size'];
-            $query = "INSERT INTO tbl_carta (sanpham_anh,session_idA,sanpham_id,sanpham_tieude,sanpham_gia,color_anh,quantitys,sanpham_size) VALUES 
+            $query = "INSERT INTO tbl_cart (sanpham_anh,session_idA,sanpham_id,sanpham_tieude,sanpham_gia,color_anh,quantitys,sanpham_size) VALUES 
              ('$sanpham_anh','$session_idA','$sanpham_id','$sanpham_tieude','$sanpham_gia','$color_anh','$quantitys','$sanpham_size')";
              $resultC= $this ->db ->insert($query);
              if($resultC){
@@ -236,7 +232,7 @@
             $color_anh = $resultB['color_anh'];
             $quantitys = $resultB['quantitys'];
             $sanpham_size = $resultB['sanpham_size'];
-            $query = "INSERT INTO tbl_carta (sanpham_anh,session_idA,sanpham_id,sanpham_tieude,sanpham_gia,color_anh,quantitys,sanpham_size) VALUES 
+            $query = "INSERT INTO tbl_cart (sanpham_anh,session_idA,sanpham_id,sanpham_tieude,sanpham_gia,color_anh,quantitys,sanpham_size) VALUES 
              ('$sanpham_anh','$session_idA','$sanpham_id','$sanpham_tieude','$sanpham_gia','$color_anh','$quantitys','$sanpham_size')";
              $resultC= $this ->db ->insert($query);
              if($resultC){
@@ -254,11 +250,7 @@
 
         
     }
-    public function show_carta($session_id){
-        $query = "SELECT * FROM tbl_carta WHERE session_idA = '$session_id' ORDER BY carta_id DESC";
-        $result = $this -> db ->select($query);
-        return $result;
-    }
+
     public function show_order($session_id) {
         $query = "SELECT tbl_order.*, tbl_diachi.*
         FROM tbl_order INNER JOIN tbl_diachi ON tbl_order.customer_xa = tbl_diachi.ma_px

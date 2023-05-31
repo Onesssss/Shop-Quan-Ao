@@ -29,7 +29,7 @@
     <title>Website</title>
 </head>
 <body>
-    <secsion class="top">
+    <session class="top">
         <div class="container">
             <div class="row">
                 <div class="menu-bar">
@@ -99,30 +99,30 @@
                             <div class="cart-content-mini">
                                 <div class="cart-content-mini-top">
                                     <P>Giỏ hàng</P>
-                                </div>
+                                </div> 
                                 <?php 
                                 $session_id = session_id();
                                 $show_cartF = $index -> show_cartF($session_id);
                                 if($show_cartF){while($result = $show_cartF->fetch_assoc()){
                                 
                                  ?>
-                                <div class="cart-content-mini-item">
+                                 <!-- <div class="cart-content-mini-item">
                                     <img style="width:50px" src="<?php echo $result['sanpham_anh']  ?>" alt="">
                                     <div class="cart-content-item-text">
                                     <h1><?php echo $result['sanpham_tieude']  ?></h1> 
                                     <p>Size: <?php echo $result['sanpham_size']  ?></p>
                                     <p>SL: <?php echo $result['quantitys']  ?></p>
                                     </div>
-                                </div>
+                                </div>  -->
                                     <?php
                                     
                                         
                                             }}
-                                ?>
-                                
-                                <div class="cart-content-mini-bottom">
+                                ?> 
+<!--                                 
+                                 <div class="cart-content-mini-bottom">
                                     <p><a href="cart.php">...Xem chi tiết</a></p>
-                                </div>
+                                </div>  -->
                             </div>
                         </li>
                     </ul>
@@ -130,4 +130,4 @@
                 </div>
             </div>
         </div>
-    </secsion>
+    </session>
